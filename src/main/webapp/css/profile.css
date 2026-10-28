@@ -1,0 +1,752 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255, 166, 0, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #fffaf5,
+            #fff1e5
+        );
+
+    color: #241811;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    width: 100%;
+
+    height: 72px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-bottom: 1px solid rgba(87, 47, 25, .08);
+
+    box-shadow:
+        0 5px 20px rgba(65, 32, 13, .07);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #241811;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 25px;
+
+    font-weight: 900;
+}
+
+.logo-icon {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8c00,
+            #ee4218
+        );
+
+    color: white;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 6px 15px rgba(238, 66, 24, .25);
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #5f4639;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.nav-links a:hover {
+    color: #ef4b1c;
+}
+
+.nav-links .active {
+    color: #ef4b1c;
+}
+
+
+/* CART */
+
+.cart-link {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+
+    top: -10px;
+
+    right: -15px;
+
+    min-width: 18px;
+
+    height: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 5px;
+
+    border-radius: 20px;
+
+    background: #ee4218;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 900;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page-wrapper {
+    width: 92%;
+
+    max-width: 1050px;
+
+    margin: 45px auto 70px;
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.page-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    background: #fff0e3;
+
+    color: #ef4b1c;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: .5px;
+
+    margin-bottom: 13px;
+}
+
+.page-heading h1 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 39px;
+
+    line-height: 1.1;
+
+    color: #241811;
+
+    margin-bottom: 10px;
+}
+
+.page-heading p {
+    color: #80685b;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.profile-card {
+    max-width: 850px;
+
+    margin: auto;
+
+    background: rgba(255, 255, 255, .96);
+
+    border: 1px solid rgba(87, 47, 25, .08);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 18px 50px rgba(65, 32, 13, .10);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   PROFILE TOP
+===================================================== */
+
+.profile-top {
+    padding: 35px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ef,
+            #fff0e3
+        );
+
+    border-bottom:
+        1px solid rgba(87, 47, 25, .07);
+}
+
+.profile-icon {
+    width: 82px;
+
+    height: 82px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff8c00,
+            #ee4218
+        );
+
+    color: white;
+
+    font-size: 38px;
+
+    box-shadow:
+        0 10px 25px rgba(238, 66, 24, .25);
+}
+
+.profile-heading h2 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 27px;
+
+    color: #241811;
+
+    margin-bottom: 5px;
+}
+
+.profile-heading p {
+    color: #80685b;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   MESSAGES
+===================================================== */
+
+.message {
+    margin: 25px 40px 0;
+
+    padding: 13px 16px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.success-message {
+    background: #eaf8ed;
+
+    color: #24733b;
+
+    border: 1px solid #c9ebd1;
+}
+
+.error-message {
+    background: #fff0ef;
+
+    color: #b7352c;
+
+    border: 1px solid #f2c9c5;
+}
+
+
+/* =====================================================
+   PROFILE BODY
+===================================================== */
+
+.profile-body {
+    padding: 35px 40px 40px;
+}
+
+
+/* DETAILS */
+
+.details-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.detail-box {
+    padding: 17px 18px;
+
+    border-radius: 14px;
+
+    background: #fffaf6;
+
+    border:
+        1px solid rgba(87, 47, 25, .08);
+
+    transition: .25s ease;
+}
+
+.detail-box:hover {
+    border-color:
+        rgba(238, 66, 24, .20);
+
+    box-shadow:
+        0 5px 18px rgba(65, 32, 13, .05);
+}
+
+.address-box {
+    grid-column: 1 / -1;
+}
+
+.detail-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #9a7867;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: .7px;
+}
+
+.detail-value {
+    color: #332219;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+
+/* =====================================================
+   EDIT MODE
+===================================================== */
+
+.edit-mode {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #6e5142;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border:
+        1px solid #e5d7cc;
+
+    border-radius: 11px;
+
+    background: #fffdfa;
+
+    color: #2d2019;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: .25s ease;
+}
+
+.form-group textarea {
+    min-height: 90px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f27635;
+
+    box-shadow:
+        0 0 0 3px rgba(242, 118, 53, .10);
+
+    background: white;
+}
+
+
+/* =====================================================
+   ROLE
+===================================================== */
+
+.role-box {
+    margin-top: 18px;
+
+    padding: 15px 17px;
+
+    border-radius: 13px;
+
+    background: #fff6ee;
+
+    border:
+        1px solid rgba(255, 140, 0, .12);
+}
+
+.role-box .detail-label {
+    margin-bottom: 5px;
+}
+
+.role-value {
+    color: #ef4b1c;
+
+    font-size: 14px;
+
+    font-weight: 900;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.button {
+    height: 43px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.primary-button {
+    background:
+        linear-gradient(
+            135deg,
+            #ff8c00,
+            #ee4218
+        );
+
+    color: white;
+
+    box-shadow:
+        0 7px 18px rgba(238, 66, 24, .20);
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(238, 66, 24, .28);
+}
+
+.secondary-button {
+    background: #f4eee9;
+
+    color: #684d3f;
+}
+
+.secondary-button:hover {
+    background: #ebe1d9;
+}
+
+
+/* =====================================================
+   BACK LINK
+===================================================== */
+
+.back-link {
+    display: block;
+
+    width: fit-content;
+
+    margin: 25px auto 0;
+
+    color: #8a6755;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    transition: .25s ease;
+}
+
+.back-link:hover {
+    color: #ef4b1c;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .page-heading h1 {
+        font-size: 32px;
+    }
+
+    .profile-top {
+        padding: 28px;
+    }
+
+    .profile-body {
+        padding: 28px;
+    }
+
+    .message {
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .address-box {
+        grid-column: auto;
+    }
+}
+
+
+@media (max-width: 560px) {
+
+    .navbar {
+        height: auto;
+
+        padding-top: 15px;
+
+        padding-bottom: 15px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .page-wrapper {
+        width: 94%;
+
+        margin-top: 30px;
+    }
+
+    .page-heading h1 {
+        font-size: 28px;
+    }
+
+    .profile-top {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 28px 20px;
+    }
+
+    .profile-body {
+        padding: 25px 20px 30px;
+    }
+
+    .message {
+        margin-left: 20px;
+
+        margin-right: 20px;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

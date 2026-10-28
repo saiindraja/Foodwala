@@ -1,0 +1,533 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+
+    background: #fff8f1;
+
+    color: #24150e;
+
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 5%;
+
+    background: rgba(255, 250, 245, 0.96);
+
+    border-bottom: 1px solid rgba(110, 57, 25, 0.08);
+
+    position: relative;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 5px 25px rgba(80, 37, 12, 0.05);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #e44816;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+.logo::before {
+    content: "🍴";
+
+    width: 39px;
+
+    height: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb000,
+            #f04419
+        );
+
+    color: white;
+
+    font-size: 19px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.nav-links a {
+    color: #4b352b;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: #e44816;
+}
+
+.user-link {
+    color: #e44816 !important;
+
+    font-weight: 900 !important;
+}
+
+.logout-link {
+    color: #d32f2f !important;
+}
+
+
+/* CART */
+
+.cart-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #4b352b;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.cart-count {
+    min-width: 20px;
+
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 6px;
+
+    border-radius: 20px;
+
+    background: #e44816;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 900;
+}
+
+
+/* =====================================================
+   ORDER SUCCESS AREA
+===================================================== */
+
+.success-section {
+    min-height: calc(100vh - 76px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 176, 0, 0.18),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(238, 66, 24, 0.16),
+            transparent 35%
+        ),
+        #fff8f1;
+}
+
+
+/* BACKGROUND GLOW */
+
+.success-glow {
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 166, 0, 0.15),
+            transparent 68%
+        );
+
+    top: -170px;
+
+    right: -100px;
+}
+
+
+/* SUCCESS CARD */
+
+.success-box {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(620px, 100%);
+
+    padding: 48px 45px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(87, 47, 25, 0.08);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 60px rgba(80, 37, 12, 0.12);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* SUCCESS ICON */
+
+.success-icon {
+    width: 88px;
+
+    height: 88px;
+
+    margin: 0 auto 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb000,
+            #e44816
+        );
+
+    color: white;
+
+    font-size: 45px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 12px 30px rgba(228, 72, 22, 0.25);
+}
+
+
+/* BADGE */
+
+.success-badge {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    background: #fff4df;
+
+    border: 1px solid rgba(228, 72, 22, 0.12);
+
+    color: #a84b1d;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* HEADING */
+
+.success-box h1 {
+    margin-bottom: 12px;
+
+    color: #24150e;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(30px, 5vw, 44px);
+
+    line-height: 1.1;
+
+    font-weight: 900;
+}
+
+.success-box h1 span {
+    color: #e44816;
+}
+
+
+/* MESSAGE */
+
+.message {
+    max-width: 500px;
+
+    margin: 0 auto 24px;
+
+    color: #76594b;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* ORDER ID */
+
+.order-card {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+
+    padding: 12px 20px;
+
+    border-radius: 14px;
+
+    background: #fff7ec;
+
+    border: 1px solid rgba(228, 72, 22, 0.12);
+}
+
+.order-card-label {
+    color: #8b6b5c;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+.order-card-id {
+    color: #e44816;
+
+    font-size: 16px;
+
+    font-weight: 900;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.button {
+    min-width: 165px;
+
+    padding: 13px 22px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.primary-button {
+    background:
+        linear-gradient(
+            135deg,
+            #ff9f00,
+            #e44816
+        );
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(228, 72, 22, 0.18);
+}
+
+.secondary-button {
+    background: white;
+
+    color: #e44816;
+
+    border: 1px solid rgba(228, 72, 22, 0.22);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.primary-button:hover {
+    box-shadow:
+        0 12px 26px rgba(228, 72, 22, 0.25);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: auto;
+
+        min-height: 76px;
+
+        padding: 15px 5%;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .success-section {
+        padding: 40px 15px;
+    }
+
+    .success-box {
+        padding: 38px 22px;
+
+        border-radius: 22px;
+    }
+
+    .success-box h1 {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo::before {
+        width: 34px;
+
+        height: 34px;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .cart-link {
+        margin-left: auto;
+    }
+
+    .success-icon {
+        width: 76px;
+
+        height: 76px;
+
+        font-size: 38px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

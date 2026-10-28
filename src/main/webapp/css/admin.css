@@ -1,0 +1,275 @@
+
+/* Foodwala Admin Dashboard */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff7f3;
+    color: #333;
+}
+
+/* Navbar */
+.admin-navbar {
+    background: #ffffff;
+    min-height: 72px;
+    padding: 15px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.admin-logo {
+    color: #ff4d2d;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.admin-navbar a {
+    text-decoration: none;
+}
+
+.logout-btn {
+    background: linear-gradient(135deg, #ff512f, #f09819);
+    color: white;
+    padding: 11px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    opacity: 0.85;
+}
+
+/* Main content */
+.admin-container {
+    padding: 35px 6%;
+}
+
+.admin-welcome {
+    margin-bottom: 30px;
+}
+
+.admin-welcome h1 {
+    color: #ff4d2d;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.admin-welcome p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Dashboard cards */
+.admin-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.admin-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #ffe2d6;
+    box-shadow: 0 5px 18px rgba(255, 77, 45, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 77, 45, 0.15);
+}
+
+.admin-card h3 {
+    color: #ff4d2d;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.admin-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.admin-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff512f, #f09819);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.admin-btn:hover {
+    opacity: 0.88;
+}
+
+/* Footer */
+.admin-footer {
+    text-align: center;
+    padding: 22px;
+    color: #777;
+    margin-top: 35px;
+}
+
+/* Mobile responsive */
+@media (max-width: 650px) {
+    .admin-navbar {
+        padding: 15px 5%;
+    }
+
+    .admin-logo {
+        font-size: 22px;
+    }
+
+    .admin-container {
+        padding: 25px 5%;
+    }
+
+    .admin-welcome h1 {
+        font-size: 25px;
+    }
+
+    .admin-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-card {
+        padding: 23px;
+    }
+}
+/* Foodwala Admin Orders Page */
+
+.orders-container {
+    padding: 35px 6%;
+}
+
+.orders-header {
+    margin-bottom: 25px;
+}
+
+.orders-header h1 {
+    color: #ff4d2d;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.orders-header p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.orders-table-wrapper {
+    background: #ffffff;
+    border: 1px solid #ffe2d6;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(255, 77, 45, 0.08);
+    overflow-x: auto;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 950px;
+}
+
+.orders-table th {
+    background: #fff0e9;
+    color: #ff4d2d;
+    text-align: left;
+    padding: 16px;
+    white-space: nowrap;
+}
+
+.orders-table td {
+    padding: 15px 16px;
+    border-bottom: 1px solid #ffe8df;
+    color: #444;
+    vertical-align: middle;
+}
+
+.orders-table tr:last-child td {
+    border-bottom: none;
+}
+
+.orders-table tbody tr:hover {
+    background: #fffaf7;
+}
+
+.order-status-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 240px;
+}
+
+.order-status-form select {
+    padding: 9px 10px;
+    border: 1px solid #ffd2c2;
+    border-radius: 8px;
+    background: #fff;
+    color: #333;
+    outline: none;
+}
+
+.order-status-form select:focus {
+    border-color: #ff4d2d;
+}
+
+.orders-table .admin-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.orders-message {
+    background: #ffffff;
+    border: 1px solid #ffe2d6;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.orders-empty {
+    text-align: center;
+    padding: 35px;
+    color: #777;
+}
+
+.orders-footer {
+    text-align: center;
+    padding: 22px;
+    color: #777;
+    margin-top: 35px;
+}
+
+@media (max-width: 650px) {
+    .orders-container {
+        padding: 25px 5%;
+    }
+
+    .orders-header h1 {
+        font-size: 25px;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 12px;
+    }
+
+    .order-status-form {
+        flex-wrap: wrap;
+    }
+}
